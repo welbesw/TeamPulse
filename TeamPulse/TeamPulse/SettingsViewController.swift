@@ -12,6 +12,8 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var userIdLabel: UILabel!
+    @IBOutlet var certificateFileName: UILabel!
+    @IBOutlet var authorizeHealthDataLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
         
         userNameTextField.text = ConfigManager.userName()
         userIdLabel.text = ConfigManager.userId()
+        certificateFileName.text = ConfigManager.certificateFileName()
     }
 
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
@@ -37,8 +40,16 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.section == 1 && indexPath.row == 0 {
+        if indexPath.section == 2 && indexPath.row == 0 {
             //Authorize health data
+            HealthDataManager.sharedInstance.requestAuthorization { (success) in
+                DispatchQueue.main.async {
+                    let message = success ? "Authorized health data access." : "Failed to authorize health data access."
+                    let alertController = UIAlertController(title: "Health Data", message: message, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
         }
     }
 }

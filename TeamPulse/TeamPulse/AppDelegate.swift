@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ConfigManager.setUserId(userId: UUID().uuidString)
         }
         
+        let _ = HealthDataManager.sharedInstance.initialize()
+        
         return true
     }
 
@@ -64,8 +66,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         do {
             try FileManager.default.copyItem(at: url, to: destinationUrl)
-            print(url.path)
             print("p12 file moved from:", url, "to:", destinationUrl)
+            ConfigManager.setCertificateFileName(fileName: fileName)
             NotificationCenter.default.post(name: .newCertificateFile, object: fileName)
         } catch {
             print(error)

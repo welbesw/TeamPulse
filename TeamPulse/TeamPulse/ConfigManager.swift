@@ -27,4 +27,13 @@ class ConfigManager {
         UserDefaults.standard.setValue(userId, forKey: "userId")
         UserDefaults.standard.synchronize()
     }
+    
+    class func certificateFileName() -> String? {
+        return UserDefaults.standard.string(forKey: "certificateFileName")
+    }
+    
+    class func setCertificateFileName(fileName: String?) {
+        UserDefaults.standard.setValue(fileName, forKey: "certificateFileName")
+        UserDefaults.standard.synchronize()
+    }
 }
