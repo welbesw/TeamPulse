@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let _ = HealthDataManager.sharedInstance.initialize()
         
+        if SessionHandler.sharedInstance.isWatchSessionSupported() {
+            print("Watch session is not supported")
+        }
+        
         return true
     }
 

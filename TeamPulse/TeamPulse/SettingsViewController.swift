@@ -14,11 +14,12 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet var userIdLabel: UILabel!
     @IBOutlet var certificateFileName: UILabel!
     @IBOutlet var authorizeHealthDataLabel: UILabel!
+    @IBOutlet var heartRateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateHeartRate(notification:)), name: .newHeartRate, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,6 +28,7 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
         userNameTextField.text = ConfigManager.userName()
         userIdLabel.text = ConfigManager.userId()
         certificateFileName.text = ConfigManager.certificateFileName()
+        heartRateLabel.text = "--"
     }
 
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
@@ -49,6 +51,14 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
                     alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
                 }
+            }
+        }
+    }
+    
+    @objc func updateHeartRate(notification:Notification) {
+        if let heartRate = notification.object as? Double {
+            DispatchQueue.main.async {
+                self.heartRateLabel.text = String(format: "%.0f", heartRate)
             }
         }
     }

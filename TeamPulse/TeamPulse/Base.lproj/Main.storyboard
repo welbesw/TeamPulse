@@ -41,6 +41,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="nZu-2M-Eq2">
+                            <rect key="frame" x="0.0" y="341.5" width="375" height="94"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jTC-ud-axS">
+                                    <rect key="frame" x="162" y="21" width="51" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="Toy-m5-kPs"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bpm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF5-kQ-c49">
+                                    <rect key="frame" x="221" y="28.5" width="35" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="4Gu-8b-HTO"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❤️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49c-0n-EsW">
+                                    <rect key="frame" x="131" y="28.5" width="23" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="beQ-7d-ANO"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulse from Watch App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn0-Bt-dSc">
+                                    <rect key="frame" x="8" y="65" width="359" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="49c-0n-EsW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nZu-2M-Eq2" secondAttribute="leading" id="3lW-HF-xcM"/>
+                                <constraint firstAttribute="bottom" secondItem="Fn0-Bt-dSc" secondAttribute="bottom" constant="8" id="8iW-FG-GSO"/>
+                                <constraint firstItem="49c-0n-EsW" firstAttribute="top" secondItem="nZu-2M-Eq2" secondAttribute="top" constant="28.5" id="B2z-mj-WEE"/>
+                                <constraint firstItem="LF5-kQ-c49" firstAttribute="centerY" secondItem="49c-0n-EsW" secondAttribute="centerY" id="Dlv-bL-Wic"/>
+                                <constraint firstAttribute="trailing" secondItem="Fn0-Bt-dSc" secondAttribute="trailing" constant="8" id="VmH-o5-DJp"/>
+                                <constraint firstItem="jTC-ud-axS" firstAttribute="leading" secondItem="49c-0n-EsW" secondAttribute="trailing" constant="8" id="Wnm-OT-zxY"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LF5-kQ-c49" secondAttribute="trailing" id="ecC-mC-atv"/>
+                                <constraint firstItem="LF5-kQ-c49" firstAttribute="leading" secondItem="jTC-ud-axS" secondAttribute="trailing" constant="8" id="irq-b8-PqB"/>
+                                <constraint firstItem="jTC-ud-axS" firstAttribute="centerY" secondItem="49c-0n-EsW" secondAttribute="centerY" id="lev-rO-33z"/>
+                                <constraint firstItem="jTC-ud-axS" firstAttribute="centerX" secondItem="nZu-2M-Eq2" secondAttribute="centerX" id="mJX-6J-HfL"/>
+                                <constraint firstItem="Fn0-Bt-dSc" firstAttribute="leading" secondItem="nZu-2M-Eq2" secondAttribute="leading" constant="8" id="pMA-Gi-hmv"/>
+                                <constraint firstItem="Fn0-Bt-dSc" firstAttribute="top" secondItem="jTC-ud-axS" secondAttribute="bottom" constant="8" id="wVB-s4-sqi"/>
+                            </constraints>
+                        </view>
                         <sections>
                             <tableViewSection headerTitle="User" id="o9T-BV-e9R">
                                 <cells>
@@ -154,6 +208,7 @@
                     <connections>
                         <outlet property="authorizeHealthDataLabel" destination="XLs-9o-JLf" id="uxR-5m-s4c"/>
                         <outlet property="certificateFileName" destination="ts2-U1-Qdg" id="Pud-cz-Vb0"/>
+                        <outlet property="heartRateLabel" destination="jTC-ud-axS" id="W1b-DW-CcG"/>
                         <outlet property="userIdLabel" destination="GLL-Xa-TFC" id="UIu-Pl-dt7"/>
                         <outlet property="userNameTextField" destination="tyC-Ya-umI" id="JIJ-jb-rsB"/>
                     </connections>

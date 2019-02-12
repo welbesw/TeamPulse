@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MotionWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="b5I-gt-pOg">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="❤️" id="ORB-8E-hXK">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                </label>
+                                <label alignment="left" verticalAlignment="bottom" text="86" id="XFW-8B-9kL">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                </label>
+                                <label alignment="left" verticalAlignment="center" text="bpm" baselineAdjustment="alignCenters" id="CZW-Pi-I7k"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Start Workout" id="tBZ-VI-W2y">
+                            <connections>
+                                <action selector="didTapStartStopWorkout" destination="AgC-eL-Hgc" id="yJJ-vG-EAf"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="heartRateLabel" destination="XFW-8B-9kL" id="JTE-d5-9rJ"/>
+                        <outlet property="startStopButton" destination="tBZ-VI-W2y" id="XBG-Uk-bDU"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
