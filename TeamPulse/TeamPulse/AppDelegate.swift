@@ -47,5 +47,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let fileManager = FileManager.default
+        let fileName = url.lastPathComponent
+        
+        guard let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return false
+        }
+        
+        let destinationUrl = documentsURL.appendingPathComponent(fileName)
+        do {
+            try FileManager.default.removeItem(at: destinationUrl)
+        } catch {
+            print(error)
+            return false
+        }
+        do {
+            try FileManager.default.copyItem(at: url, to: destinationUrl)
+            print(url.path)
+            print("p12 file moved from:", url, "to:", destinationUrl)
+            NotificationCenter.default.post(name: .newCertificateFile, object: fileName)
+        } catch {
+            print(error)
+            return false
+        }
+        
+        return true
+    }
 }
 

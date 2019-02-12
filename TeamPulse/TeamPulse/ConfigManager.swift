@@ -16,6 +16,7 @@ class ConfigManager {
     
     class func setUserName(userName: String?) {
         UserDefaults.standard.setValue(userName, forKey: "userName")
+        UserDefaults.standard.synchronize()
     }
     
     class func userId() -> String? {
@@ -24,5 +25,6 @@ class ConfigManager {
     
     class func setUserId(userId: String) {
         UserDefaults.standard.setValue(userId, forKey: "userId")
+        UserDefaults.standard.synchronize()
     }
 }

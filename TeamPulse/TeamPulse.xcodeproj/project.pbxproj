@@ -14,6 +14,7 @@
 		BE64AB0D2213211D00651F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE64AB0B2213211D00651F90 /* LaunchScreen.storyboard */; };
 		BE64AB15221323AA00651F90 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB14221323AA00651F90 /* SettingsViewController.swift */; };
 		BE64AB172213253600651F90 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB162213253600651F90 /* ConfigManager.swift */; };
+		BE64AB1922133EE400651F90 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB1822133EE400651F90 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BE64AB0E2213211D00651F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE64AB14221323AA00651F90 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BE64AB162213253600651F90 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		BE64AB1822133EE400651F90 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				BE64AB0E2213211D00651F90 /* Info.plist */,
 				BE64AB14221323AA00651F90 /* SettingsViewController.swift */,
 				BE64AB162213253600651F90 /* ConfigManager.swift */,
+				BE64AB1822133EE400651F90 /* Extensions.swift */,
 			);
 			path = TeamPulse;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE64AB1922133EE400651F90 /* Extensions.swift in Sources */,
 				BE64AB052213211D00651F90 /* DashboardViewController.swift in Sources */,
 				BE64AB032213211D00651F90 /* AppDelegate.swift in Sources */,
 				BE64AB15221323AA00651F90 /* SettingsViewController.swift in Sources */,
