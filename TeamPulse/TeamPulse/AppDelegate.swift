@@ -62,16 +62,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let destinationUrl = documentsURL.appendingPathComponent(fileName)
-        do {
-            try FileManager.default.removeItem(at: destinationUrl)
-        } catch {
-            print(error)
-            return false
+        
+        if FileManager.default.fileExists(atPath: destinationUrl.absoluteString) {
+            do {
+                try FileManager.default.removeItem(at: destinationUrl)
+            } catch {
+                print(error)
+                return false
+            }
         }
+        
         do {
             try FileManager.default.copyItem(at: url, to: destinationUrl)
             print("p12 file moved from:", url, "to:", destinationUrl)
             ConfigManager.setCertificateFileName(fileName: fileName)
+            ConfigManager.setLoadedCertificateId(certificateId: nil)
             NotificationCenter.default.post(name: .newCertificateFile, object: fileName)
         } catch {
             print(error)

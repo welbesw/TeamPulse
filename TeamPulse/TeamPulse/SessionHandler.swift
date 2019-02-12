@@ -49,7 +49,9 @@ class SessionHandler: NSObject, WCSessionDelegate {
         if let heartRate = message["heartRate"] as? Double {
             print("heart rate from message: \(heartRate)")
             NotificationCenter.default.post(name: .newHeartRate, object: heartRate)
-            //MessageManager.sharedInstance.publishHeartRate(heartRate: heartRate, user: "will")
+            let userName = ConfigManager.userName() ?? ""
+            let userId = ConfigManager.userId() ?? "0"
+            MessageManager.sharedInstance.publishHeartRate(heartRate: heartRate, userName: userName, userId: userId)
         }
     }
 }

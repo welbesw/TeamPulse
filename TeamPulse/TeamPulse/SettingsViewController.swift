@@ -15,6 +15,7 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet var certificateFileName: UILabel!
     @IBOutlet var authorizeHealthDataLabel: UILabel!
     @IBOutlet var heartRateLabel: UILabel!
+    @IBOutlet var awsEndpointIdTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +30,16 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
         userIdLabel.text = ConfigManager.userId()
         certificateFileName.text = ConfigManager.certificateFileName()
         heartRateLabel.text = "--"
+        awsEndpointIdTextField.text = ConfigManager.awsEndpointId()
     }
 
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        ConfigManager.setUserName(userName: userNameTextField.text)
+        if textField == userNameTextField {
+            ConfigManager.setUserName(userName: userNameTextField.text)
+        } else if textField == awsEndpointIdTextField {
+            ConfigManager.setAWSEndpointId(id: awsEndpointIdTextField.text ?? "")
+        }
+        textField.resignFirstResponder()
         return true
     }
     
@@ -42,7 +49,7 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.section == 2 && indexPath.row == 0 {
+        if indexPath.section == 0 && indexPath.row == 0 {
             //Authorize health data
             HealthDataManager.sharedInstance.requestAuthorization { (success) in
                 DispatchQueue.main.async {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA811D0A75B44B2259B5F7F0 /* Pods_TeamPulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F925DB349FCD558761AFF9D6 /* Pods_TeamPulse.framework */; };
 		BE64AB032213211D00651F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB022213211D00651F90 /* AppDelegate.swift */; };
 		BE64AB052213211D00651F90 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB042213211D00651F90 /* DashboardViewController.swift */; };
 		BE64AB082213211D00651F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE64AB062213211D00651F90 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		BE64AB472213598D00651F90 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64AB462213598D00651F90 /* HealthKit.framework */; };
 		BE64AB482213599300651F90 /* HealthDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB1E2213532E00651F90 /* HealthDataManager.swift */; };
 		BE64AB4A22135AA300651F90 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB4922135AA300651F90 /* SessionHandler.swift */; };
+		BE64AB4C221362B000651F90 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB4B221362B000651F90 /* MessageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B9C97F456209A28A4C486D5 /* Pods-TeamPulse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamPulse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeamPulse/Pods-TeamPulse.debug.xcconfig"; sourceTree = "<group>"; };
+		BE5235E10CFAE14C8F7487BC /* Pods-TeamPulse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamPulse.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamPulse/Pods-TeamPulse.release.xcconfig"; sourceTree = "<group>"; };
 		BE64AAFF2213211D00651F90 /* TeamPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE64AB022213211D00651F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE64AB042213211D00651F90 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -97,14 +101,24 @@
 		BE64AB452213598D00651F90 /* Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch Extension.entitlements"; sourceTree = "<group>"; };
 		BE64AB462213598D00651F90 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		BE64AB4922135AA300651F90 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
+		BE64AB4B221362B000651F90 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+		F925DB349FCD558761AFF9D6 /* Pods_TeamPulse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamPulse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		91B3D53BE9A31DB314C4EE2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE64AAFC2213211D00651F90 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BE64AB1C2213531100651F90 /* HealthKit.framework in Frameworks */,
+				AA811D0A75B44B2259B5F7F0 /* Pods_TeamPulse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59E8258341043883F157245E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B9C97F456209A28A4C486D5 /* Pods-TeamPulse.debug.xcconfig */,
+				BE5235E10CFAE14C8F7487BC /* Pods-TeamPulse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BE64AAF62213211D00651F90 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +150,7 @@
 				BE64AB322213597600651F90 /* Watch Extension */,
 				BE64AB002213211D00651F90 /* Products */,
 				BE64AB1A2213531100651F90 /* Frameworks */,
+				59E8258341043883F157245E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +179,7 @@
 				BE64AB1822133EE400651F90 /* Extensions.swift */,
 				BE64AB1E2213532E00651F90 /* HealthDataManager.swift */,
 				BE64AB4922135AA300651F90 /* SessionHandler.swift */,
+				BE64AB4B221362B000651F90 /* MessageManager.swift */,
 			);
 			path = TeamPulse;
 			sourceTree = "<group>";
@@ -164,6 +189,7 @@
 			children = (
 				BE64AB462213598D00651F90 /* HealthKit.framework */,
 				BE64AB1B2213531100651F90 /* HealthKit.framework */,
+				F925DB349FCD558761AFF9D6 /* Pods_TeamPulse.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,10 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE64AB112213211D00651F90 /* Build configuration list for PBXNativeTarget "TeamPulse" */;
 			buildPhases = (
+				112107F5ED68C110FE563C98 /* [CP] Check Pods Manifest.lock */,
 				BE64AAFB2213211D00651F90 /* Sources */,
 				BE64AAFC2213211D00651F90 /* Frameworks */,
 				BE64AAFD2213211D00651F90 /* Resources */,
 				BE64AB442213597600651F90 /* Embed Watch Content */,
+				95F28910F4D4BFED04718D4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +246,7 @@
 			buildPhases = (
 				BE64AB202213597500651F90 /* Resources */,
 				BE64AB402213597600651F90 /* Embed App Extensions */,
+				91B3D53BE9A31DB314C4EE2D /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -327,6 +356,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		112107F5ED68C110FE563C98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeamPulse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95F28910F4D4BFED04718D4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TeamPulse/Pods-TeamPulse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSIoT/AWSIoT.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSIoT.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeamPulse/Pods-TeamPulse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE64AAFB2213211D00651F90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -339,6 +409,7 @@
 				BE64AB15221323AA00651F90 /* SettingsViewController.swift in Sources */,
 				BE64AB172213253600651F90 /* ConfigManager.swift in Sources */,
 				BE64AB1F2213532E00651F90 /* HealthDataManager.swift in Sources */,
+				BE64AB4C221362B000651F90 /* MessageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +584,7 @@
 		};
 		BE64AB122213211D00651F90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B9C97F456209A28A4C486D5 /* Pods-TeamPulse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TeamPulse/TeamPulse.entitlements;
@@ -532,6 +604,7 @@
 		};
 		BE64AB132213211D00651F90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE5235E10CFAE14C8F7487BC /* Pods-TeamPulse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TeamPulse/TeamPulse.entitlements;

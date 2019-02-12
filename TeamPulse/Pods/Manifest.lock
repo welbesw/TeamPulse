@@ -1,0 +1,20 @@
+PODS:
+  - AWSCore (2.8.4)
+  - AWSIoT (2.8.4):
+    - AWSCore (= 2.8.4)
+
+DEPENDENCIES:
+  - AWSIoT (~> 2.8.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AWSCore
+    - AWSIoT
+
+SPEC CHECKSUMS:
+  AWSCore: 734b0d67c2c77f6edae9e5520431a37310ea4193
+  AWSIoT: 3e41785ebe7f6d4c40a4dfff214676a2a2e9e6d0
+
+PODFILE CHECKSUM: 21503a812adc2d98caf39cc2d9962e3e6fa953a1
+
+COCOAPODS: 1.5.3

@@ -14,6 +14,18 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(certificateFileNotification(notification:)), name: .newCertificateFile, object: nil)
+        
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if !MessageManager.sharedInstance.isConnected() {
+            if MessageManager.sharedInstance.initialize() {
+                MessageManager.sharedInstance.connectToMQTT()
+            }
+        }
     }
     
     @objc func certificateFileNotification(notification: Notification) {

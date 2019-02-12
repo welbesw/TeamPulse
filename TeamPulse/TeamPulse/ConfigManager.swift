@@ -36,4 +36,22 @@ class ConfigManager {
         UserDefaults.standard.setValue(fileName, forKey: "certificateFileName")
         UserDefaults.standard.synchronize()
     }
+    
+    class func loadedCertificateId() -> String? {
+        return UserDefaults.standard.string(forKey: "certificateId")
+    }
+    
+    class func setLoadedCertificateId(certificateId: String?) {
+        UserDefaults.standard.setValue(certificateId, forKey: "certificateId")
+        UserDefaults.standard.synchronize()
+    }
+    
+    class func awsEndpointId() -> String {
+        return UserDefaults.standard.string(forKey: "awsEndpointId") ?? ""
+    }
+    
+    class func setAWSEndpointId(id: String) {
+        UserDefaults.standard.setValue(id, forKey: "awsEndpointId")
+        UserDefaults.standard.synchronize()
+    }
 }
