@@ -10,5 +10,6 @@ import Foundation
 
 extension Notification.Name {
     static let newCertificateFile = Notification.Name("newCertificateFile")
-    static let newHeartRate = Notification.Name("newHeartRate")
+    static let newHeartRateWatch = Notification.Name("newHeartRateWatch")
+    static let newHeartRateMQTT = Notification.Name("newHeartRateMQTT")
 }

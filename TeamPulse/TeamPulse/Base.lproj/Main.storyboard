@@ -20,23 +20,79 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y6g-KB-O3N">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6ew-zp-jWd">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="115" height="115"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tFj-oI-Q25">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="heartRateCell" id="tFj-oI-Q25" customClass="HeartRateCollectionViewCell" customModule="TeamPulse" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="115" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrf-8I-pbM">
+                                                    <rect key="frame" x="14" y="40" width="88" height="48"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="❤️" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5if-u1-9Vt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="23" height="48"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NNh-z9-3Dn">
+                                                            <rect key="frame" x="23" y="0.0" width="65" height="48"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="NNh-z9-3Dn" firstAttribute="top" secondItem="Wrf-8I-pbM" secondAttribute="top" id="3AA-qy-Lxx"/>
+                                                        <constraint firstItem="5if-u1-9Vt" firstAttribute="leading" secondItem="Wrf-8I-pbM" secondAttribute="leading" id="8KF-mn-Qe3"/>
+                                                        <constraint firstAttribute="height" constant="48" id="CxN-l5-zCq"/>
+                                                        <constraint firstAttribute="bottom" secondItem="5if-u1-9Vt" secondAttribute="bottom" id="Ipf-uO-TM9"/>
+                                                        <constraint firstItem="5if-u1-9Vt" firstAttribute="top" secondItem="Wrf-8I-pbM" secondAttribute="top" id="PCx-kd-LUt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="NNh-z9-3Dn" secondAttribute="trailing" id="PN7-Ma-Spm"/>
+                                                        <constraint firstItem="NNh-z9-3Dn" firstAttribute="leading" secondItem="5if-u1-9Vt" secondAttribute="trailing" id="TqB-7m-Zez"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NNh-z9-3Dn" secondAttribute="bottom" id="aNQ-u0-mID"/>
+                                                        <constraint firstItem="NNh-z9-3Dn" firstAttribute="leading" secondItem="5if-u1-9Vt" secondAttribute="trailing" id="b76-WA-XP0"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bob Smith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e8N-Dx-qRE">
+                                                    <rect key="frame" x="14" y="76" width="88" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Xt2-Bm-SqK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="e8N-Dx-qRE" firstAttribute="leading" secondItem="tFj-oI-Q25" secondAttribute="leadingMargin" constant="6" id="1hE-Dk-67l"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Wrf-8I-pbM" secondAttribute="trailing" constant="5" id="4yq-oC-CAr"/>
+                                            <constraint firstItem="Wrf-8I-pbM" firstAttribute="leading" secondItem="tFj-oI-Q25" secondAttribute="leadingMargin" constant="6" id="F7U-q9-ZAE"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="e8N-Dx-qRE" secondAttribute="bottom" constant="10" id="awo-DE-v5T"/>
+                                            <constraint firstItem="Wrf-8I-pbM" firstAttribute="top" secondItem="tFj-oI-Q25" secondAttribute="topMargin" constant="12" id="csW-dn-MAQ"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="e8N-Dx-qRE" secondAttribute="trailing" constant="5" id="wjA-ss-Hmx"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="heartRateLabel" destination="NNh-z9-3Dn" id="iDf-a8-r0B"/>
+                                            <outlet property="userNameLabel" destination="e8N-Dx-qRE" id="UQ8-tV-t39"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ZUm-11-6ON"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,11 +107,13 @@
                     <navigationItem key="navigationItem" title="Team Pulse" id="Su8-KZ-Wti">
                         <barButtonItem key="rightBarButtonItem" title="Settings" image="740-gear-toolbar" id="DrF-LM-QhA">
                             <connections>
-                                <action selector="didTapSettingsButton" destination="BYZ-38-t0r" id="rQy-7b-3Ax"/>
                                 <segue destination="HrM-Ku-tOE" kind="show" id="9wx-0h-Y8T"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="y6g-KB-O3N" id="BYN-Ma-nIl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -20,7 +20,7 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updateHeartRate(notification:)), name: .newHeartRate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateHeartRate(notification:)), name: .newHeartRateWatch, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

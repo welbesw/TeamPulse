@@ -15,6 +15,8 @@ class MessageManager {
     
     var iotDataManager: AWSIoTDataManager!
     
+    var heartRatesDict = [String : HeartRateModel]()
+    
     func initialize() -> Bool {
         
         let endpointId = ConfigManager.awsEndpointId()
@@ -34,6 +36,9 @@ class MessageManager {
     
     private func mqttEventCallback(_ status: AWSIoTMQTTStatus ) {
         print("connection status = \(connectionStatusString())")
+        if status == .connected {
+            subscribeToHeartRates()
+        }
     }
     
     func connectToMQTT() {
@@ -86,6 +91,23 @@ class MessageManager {
         """
         let success = iotDataManager.publishString(json, onTopic: "heartrate", qoS: .messageDeliveryAttemptedAtMostOnce)
         print("Published message: \(success)")
+    }
+    
+    func subscribeToHeartRates() {
+        iotDataManager.subscribe(toTopic: "heartrate", qoS: .messageDeliveryAttemptedAtLeastOnce, messageCallback: { (data) in
+            //Parse the message looking for JSON format data
+            do {
+                let heartRateModel = try JSONDecoder().decode(HeartRateModel.self, from: data)
+                print(heartRateModel)
+                self.heartRatesDict[heartRateModel.userId] = heartRateModel
+                NotificationCenter.default.post(name: .newHeartRateMQTT, object: heartRateModel)
+            } catch {
+                print("Error decoding message.")
+            }
+        }) {
+            //ack callback
+            print("subscribed to heartrate topic")
+        }
     }
     
     private func getCertificateId(completionHandler: @escaping ((String?) -> Void)) {

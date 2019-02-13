@@ -29,6 +29,8 @@
 		BE64AB482213599300651F90 /* HealthDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB1E2213532E00651F90 /* HealthDataManager.swift */; };
 		BE64AB4A22135AA300651F90 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB4922135AA300651F90 /* SessionHandler.swift */; };
 		BE64AB4C221362B000651F90 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB4B221362B000651F90 /* MessageManager.swift */; };
+		BE64AB4E2213A4AD00651F90 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB4D2213A4AD00651F90 /* HeartRateModel.swift */; };
+		BE64AB502213AC7100651F90 /* HeartRateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64AB4F2213AC7100651F90 /* HeartRateCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		BE64AB462213598D00651F90 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		BE64AB4922135AA300651F90 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		BE64AB4B221362B000651F90 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+		BE64AB4D2213A4AD00651F90 /* HeartRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
+		BE64AB4F2213AC7100651F90 /* HeartRateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateCollectionViewCell.swift; sourceTree = "<group>"; };
 		F925DB349FCD558761AFF9D6 /* Pods_TeamPulse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamPulse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -180,6 +184,8 @@
 				BE64AB1E2213532E00651F90 /* HealthDataManager.swift */,
 				BE64AB4922135AA300651F90 /* SessionHandler.swift */,
 				BE64AB4B221362B000651F90 /* MessageManager.swift */,
+				BE64AB4D2213A4AD00651F90 /* HeartRateModel.swift */,
+				BE64AB4F2213AC7100651F90 /* HeartRateCollectionViewCell.swift */,
 			);
 			path = TeamPulse;
 			sourceTree = "<group>";
@@ -403,7 +409,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE64AB1922133EE400651F90 /* Extensions.swift in Sources */,
+				BE64AB502213AC7100651F90 /* HeartRateCollectionViewCell.swift in Sources */,
 				BE64AB052213211D00651F90 /* DashboardViewController.swift in Sources */,
+				BE64AB4E2213A4AD00651F90 /* HeartRateModel.swift in Sources */,
 				BE64AB4A22135AA300651F90 /* SessionHandler.swift in Sources */,
 				BE64AB032213211D00651F90 /* AppDelegate.swift in Sources */,
 				BE64AB15221323AA00651F90 /* SettingsViewController.swift in Sources */,
