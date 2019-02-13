@@ -98,7 +98,6 @@ class MessageManager {
             //Parse the message looking for JSON format data
             do {
                 let heartRateModel = try JSONDecoder().decode(HeartRateModel.self, from: data)
-                print(heartRateModel)
                 self.heartRatesDict[heartRateModel.userId] = heartRateModel
                 NotificationCenter.default.post(name: .newHeartRateMQTT, object: heartRateModel)
             } catch {
