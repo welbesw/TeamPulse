@@ -1,28 +1,14 @@
 # TeamPulse
 This example app demonstrates an iOS and WatchOS app that publishes a user's heart rate (pulse) to a team dashboard via MQTT and AWS IoT.
 
-<style> 
-.column {
-  float: left;
-  width: 33.33%;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.screenshot {
-    padding: 10px;
-} 
-</style>
-<div class="row">
-  <div class="column">
+<div style="content: '';display: table; clear: both;">
+  <div style="float: left; width: 33.33%;">
     <img class="screenshot" src="Images/team-pulse-dashboard-screen-shot.PNG">
   </div>
-  <div class="column">
+  <div style="float: left; width: 33.33%;">
     <img class="screenshot" src="Images/team-pulse-settings-screen-shot.PNG">
   </div>
-  <div class="column">
+  <div style="float: left; width: 33.33%;">
     <img class="screenshot" src="Images/team-pulse-health-screen-shot.PNG">
   </div>
 </div>
