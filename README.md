@@ -1,13 +1,16 @@
 # TeamPulse
-This example app demonstrates an iOS and WatchOS app that publishes a user's heart rate (pulse) to a team dashboard via MQTT and AWS IoT.
 
-<img src="Images/team-pulse-screen-shots.png">
+<img src="Images/team-pulse-apple-watch.png" width="100px" align="right" />
+
+This example app demonstrates an iOS and WatchOS app that publishes a user's heart rate (pulse) to a team dashboard via MQTT and AWS IoT.
 
 ## Requirements
 * Xcode 10
 * Swift 4
 * At least one iOS device running iOS 12 and one Apple Watch running WatchOS 5
 * An [AWS](http://aws.amazon.com) account and access to AWS IoT Core via the AWS Console
+
+<img src="Images/team-pulse-screen-shots.png">
 
 ## Setup the iOS Project
 Clone this repository locally.
