@@ -39,6 +39,10 @@ class SettingsViewController: UITableViewController, UITextFieldDelegate {
         } else if textField == awsEndpointIdTextField {
             ConfigManager.setAWSEndpointId(id: awsEndpointIdTextField.text ?? "")
         }
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
