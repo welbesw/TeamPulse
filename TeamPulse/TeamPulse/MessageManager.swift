@@ -77,6 +77,8 @@ class MessageManager {
             return "Connection Error"
         case .protocolError:
             return "Connection Protocol Error"
+        @unknown default:
+            return "Unknown"
         }
     }
     
